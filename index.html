@@ -3,59 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Video on Button Click</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-image: url('image.jpg');
-        }
-
-        #videoContainer {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        #playButton {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Play Video</title>
 </head>
 <body>
     <div id="videoContainer">
-        <video id="videoPlayer" width="100%" height="auto" controls>
+        <video id="videoPlayer" width="100%" height="auto" autoplay>
             <source src="your-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-    <button id="playButton">Play Video</button>
-
-    <script>
-        // Get references to the button and video element
-        const playButton = document.getElementById("playButton");
-        const videoPlayer = document.getElementById("videoPlayer");
-
-        // Add a click event listener to the button
-        playButton.addEventListener("click", function () {
-            if (videoPlayer.paused) {
-                // If the video is paused, play it
-                videoPlayer.play();
-                playButton.textContent = "Pause Video";
-            } else {
-                // If the video is playing, pause it
-                videoPlayer.pause();
-                playButton.textContent = "Play Video";
-            }
-        });
-    </script>
 </body>
 </html>
